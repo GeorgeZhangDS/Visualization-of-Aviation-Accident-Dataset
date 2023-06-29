@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+  </head>
+  <body onload="FinalProject()">
+    <div>
+      <h2 class="section">Visualization of Aviation Accident Dataset</h2>
+      <br />
+      <p>
+        The 21st century has witnessed rapid economic growth globally, as well
+        as closer economic ties between states. As a result, the number of
+        passengers requiring air travel has significantly increased,
+        highlighting the importance of discussing the significance of data
+        visualization in ensuring flight safety. In this project, we aim to
+        explore the US flight accident dataset from 2000 to 2023 (Exclude) to
+        better understand the factors that impact passenger safety under
+        different circumstances. Ultimately, this will enable passengers to make
+        informed decisions when selecting flights.
+      </p>
+      <br />
+      <div>
+        <h3>
+          Does the number of aircraft engines affect the incidence of fatal
+          injuries?
+        </h3>
+
+        <div id="plot1"></div>
+        <p>
+          In the scatter plot below, it is apparent that in 21st century
+          America, aircraft with two engines seem to have a higher frequency of
+          producing fatal injuries in accidents compared to aircraft with a
+          different number of engines. The most severe accident was American
+          Airlines Flight 587, which according to Wikipedia, crashed near Belle
+          Harbor in Queens, New York shortly after taking off from JFK
+          International Airport on November 12, 2001, resulting in 251
+          passengers, 9 crew members, and 5 residents on the ground for a total
+          of 265 fatalities. However, this accident is just an outlier, as most
+          of the data points are clustered around zero. Out of several thousands
+          of accidents and incidents, only a small number of flights have
+          resulted in serious injuries or fatalities.
+        </p>
+        <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+        <p>Marks: Points</p>
+        <p>Channels: Horizontal Position, Vertical Position, Color</p>
+        <div id="q1_plot" class="center_plot"></div>
+      </div>
+    </div>
+
+    <div>
+      <h3>
+        What are the top 10 aircraft brands with the highest number of fatal
+        injuries?
+      </h3>
+
+      <div id="plot2"></div>
+      <p>
+        Based on the second chart, it's apparent that "Cessna," "Piper,"
+        "Beechcraft," "Boeing," "Bell," "Airbus Industries," "Mooney,"
+        "Robinson," "Cirrus Design Corp," and "Douglas" are the ten aircraft
+        manufacturers that have caused the most fatal injuries. However, out of
+        these manufacturers, Cessna, Piper, and Beechcraft are responsible for
+        the most fatalities, and they're known for specializing in the
+        production of small general aviation aircraft. Although other companies
+        are also listed, it's notable that these three firms have a
+        significantly higher number of fatalities caused by their planes. Cessna
+        is headquartered in Wichita, Kansas, while Piper is located in Florida.
+        Beechcraft, which is based in Kansas, produces a variety of aircraft,
+        including single- and twin-engine piston planes, turboprops, and
+        business jets. It's worth mentioning that most of the aircraft produced
+        by these companies are small-sized.
+      </p>
+      <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+      <p>Marks: Lines</p>
+      <p>Channels: Horizontal Position, Vertical Position, Color</p>
+      <div id="q2_plot" class="center_plot"></div>
+    </div>
+
+    <div>
+      <h3>
+        What is the variation of aviation accidents by month between 2000 and
+        2023?
+      </h3>
+      <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+      <p>Marks: Lines</p>
+      <p>Channels: Horizontal Position, Vertical Position, Color</p>
+      <div id="plot3"></div>
+      <p>
+        According to the Stacked Chart, it's evident that with the advancement
+        of technology, aircraft manufacturers are now better equipped to provide
+        passengers with a safer travel experience, resulting in a gradual
+        decline in the number of accidents each year. From 2000 to 2023
+        (excluding the latter year), the top three years with the highest number
+        of aviation accidents were 2000, 2003, and 2001, while the years 2020,
+        2021, and 2022 had the lowest number of accidents. This indicates that
+        in today's globalized world, there has been an exponential growth in
+        demand for air travel, prompting airlines to continuously improve and
+        research flight safety. By examining the twelve months of the year, it's
+        observed that accidents mostly occur during the summer months, with July
+        and August having a higher number of aviation accidents compared to
+        other months.
+      </p>
+      <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+      <p>Marks: Lines</p>
+      <p>Channels: Horizontal Position, Vertical Position, Color</p>
+      <div id="q3_plot" class="center_plot"></div>
+    </div>
+
+    <div>
+      <h3>
+        What is the difference in the number of aviation accidents among US
+        states?
+      </h3>
+
+      <div id="plot4"></div>
+      <p>
+        Based on the Geomap chart, it is clear that most flight accidents occur
+        in three highly populated Southern states: California, Texas, and
+        Florida. These states are also the three most populous states in the US.
+        New York, which is the fourth most populous state and has a population
+        slightly smaller than Florida, ranks considerably lower in terms of
+        flight incident frequency.
+      </p>
+      <p>Color Scale: scaleSequential (Sequential Color Schema)</p>
+      <p>Marks: Areas</p>
+      <p>
+        Channels: Horizontal Position, Vertical Position, Size, Color, Shape
+      </p>
+      <div id="q4_plot" class="center_plot"></div>
+    </div>
+
+    <div>
+      <h3>
+        What is the distribution of fatal and serious injuries based on damage
+        type?
+      </h3>
+
+      <div id="plot5"></div>
+      <p>
+        The fifth chart shows that the number of people who sustain serious
+        injuries is similar when an aircraft experiences destroyed or
+        substantial damage, but higher compared to when it sustains only minor
+        damage. Specifically, the median number of seriously injured people is
+        close to 7 when an aircraft is destroyed, which is similar to
+        substantial damage. However, when the aircraft experiences minor damage,
+        the median number of seriously injured people is close to 2.
+        Additionally, in cases where the aircraft incurs only minor damage, the
+        number of injuries resulting from the accident is typically close to 0.
+        Based on thousands of flight accidents, it is evident that passengers
+        are relatively safe even if the aircraft sustains only minor damage, as
+        long as the damage is not severe or catastrophic.
+      </p>
+      <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+      <p>Marks: Points, Lines</p>
+      <p>Channels: Horizontal Position, Vertical Position, Color, Size</p>
+      <div id="q5_plot" class="center_plot"></div>
+    </div>
+
+    <div>
+      <h3>Are aviation accidents/incidents related to weather conditions?</h3>
+
+      <div id="plot6"></div>
+      <p>
+        VMC and IMC are terms used in aviation to describe different weather
+        conditions and visibility that pilots may encounter during flight. The
+        key difference between VMC and IMC in aviation is that VMC refers to
+        flight conditions in which pilots can operate the aircraft by visual
+        references, while IMC refers to flight conditions in which pilots must
+        rely solely on instrument readings to navigate and control the aircraft.
+        According to the pie chart in our sixth graph, it is evident that most
+        flight accidents occur in high visibility weather conditions, and only a
+        small proportion of flight accidents occur in IMC weather conditions.
+      </p>
+      <p>Color Scale: scaleOrdinal (Categorical Color Schema)</p>
+      <p>Marks: Areas</p>
+      <p>Channels: Color, Size</p>
+      <div id="q6_plot" class="center_plot"></div>
+    </div>
+  </body>
+</html>
