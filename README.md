@@ -7,8 +7,8 @@ In the fast-paced 21st century, the global economy has seen rapid growth, leadin
 
 ### Objective
 The main goal of this individual project is to dissect and understand various factors influencing passenger safety under different circumstances using data visualization. By presenting this data in an easily interpretable format, the project aims to empower passengers to make well-informed decisions when selecting flights.
--------------------------------------------------------------------
-### 文件
+
+### Files
 - **Final_Project_HTML_Preview.pdf**: This is the final report for presentation purposes.
 - **AviationDataset.csv**: This file contains the dataset used in the project.
 - **app.js**: This JavaScript file utilizes D3.js for creating interactive graphs and charts.
